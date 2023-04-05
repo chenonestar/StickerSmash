@@ -89,7 +89,7 @@ export default function App() {
                 });
         }
     };
-    
+
     if (status === null) {
         requestPermission();
     }
@@ -123,7 +123,7 @@ export default function App() {
                 <EmojiPicker isVisible={isModalVisible} onClose={onModalClose}>
                     <EmojiList onSelect={setPickedEmoji} onCloseModal={onModalClose} />
                 </EmojiPicker>
-                <StatusBar style="auto" />
+                <StatusBar style="light" />
             </View>
         </GestureHandlerRootView>
     );
