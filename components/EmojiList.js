@@ -16,6 +16,7 @@ export default function EmojiList({ onSelect, onCloseModal }) {
             horizontal
             showsHorizontalScrollIndicator={Platform.OS === 'web' ? true : false}
             data={emoji}
+            keyExtractor={(item, index) => index.toString()}
             contentContainerStyle={styles.listContainer}
             renderItem={({ item, index }) => {
                 return (
@@ -24,7 +25,7 @@ export default function EmojiList({ onSelect, onCloseModal }) {
                             onSelect(item);
                             onCloseModal();
                         }}>
-                        <Image source={item} key={index} style={styles.image} />
+                        <Image source={item} style={styles.image} />
                     </Pressable>
                 );
             }}
