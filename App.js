@@ -47,6 +47,8 @@ export default function App() {
 
     const onReset = () => {
         setShowAppOptions(false);
+        setSelectedImage(null);
+        setPickedEmoji(null);
     };
 
     const onAddSticker = () => {
